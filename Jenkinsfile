@@ -1,7 +1,5 @@
 pipeline {
   agent any {
-    docker { image 'g++' }}
-
     stages {
         stage('Build') {
             steps {
