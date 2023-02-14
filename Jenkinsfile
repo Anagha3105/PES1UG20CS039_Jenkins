@@ -5,7 +5,7 @@ pipeline {
             steps {
               script {
               sh 'g++ --version'
-                sh 'g++ task5.cpp'
+                sh 'g++ task5.cpp -o task5'
                 sh
                 echo 'Build Stage Successful'
               }
