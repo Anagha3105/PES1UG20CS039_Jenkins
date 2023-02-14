@@ -14,7 +14,7 @@ pipeline {
         stage('Test') {
             steps {
               script {
-                */sh './task5' */
+                /* sh './task5' */
                 echo 'Test Stage Successful'
               }
                 
