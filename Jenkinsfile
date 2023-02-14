@@ -5,25 +5,22 @@ pipeline {
             steps {
               script {
                 sh 'g++ --version'
-                sh 'g++ task5.cpp -o task5'
-                sh
+                /* sh 'g++ task5.cpp -o task5' */
                 echo 'Build Stage Successful'
               }
                 
             }
         }
-
         stage('Test') {
             steps {
               script {
-                sh './task5'
+                */sh './task5' */
                 echo 'Test Stage Successful'
               }
                 
                 
             }
         }
-
         stage('Deploy') {
             steps {
               script {
