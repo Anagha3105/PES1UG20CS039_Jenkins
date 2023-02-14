@@ -1,10 +1,14 @@
 pipeline {
-  agent any 
+  agent {
+    docker {
+      image 'g++'
+    }
+  }
     stages {
         stage('Build') {
             steps {
               script {
-              sh 'g++ --version'
+                sh 'g++ --version'
                 sh 'g++ task5.cpp -o task5'
                 sh
                 echo 'Build Stage Successful'
@@ -27,7 +31,6 @@ pipeline {
         stage('Deploy') {
             steps {
               script {
-              sh 'mvn deploy'
                 echo 'Deployment Successful'
               }
                 
