@@ -5,7 +5,7 @@ pipeline {
             steps {
               script {
                 sh 'g++ --version'
-                /* sh 'g++ task5.cpp -o task5' */
+                sh 'g++ task5.cpp -o task5'
                 echo 'Build Stage Successful'
               }
                 
@@ -14,7 +14,7 @@ pipeline {
         stage('Test') {
             steps {
               script {
-                /* sh './task5' */
+                sh './task5'
                 echo 'Test Stage Successful'
               }
                 
